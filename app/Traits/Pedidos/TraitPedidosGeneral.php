@@ -327,6 +327,7 @@ trait TraitPedidosGeneral
         LEFT JOIN ciudad c ON i.ciudad_id = c.idciudad
         WHERE i.nombreInstitucion LIKE '%$busqueda%'
         AND i.region_idregion = '$region'
+         AND i.estado_idEstado = '1'
         ");
         return $query;
     }
