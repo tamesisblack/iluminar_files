@@ -533,7 +533,6 @@ class InstitucionController extends Controller
             LEFT JOIN institucion_configuracion_periodo ic ON i.region_idregion = ic.region
             LEFT JOIN periodoescolar pec ON ic.periodo_configurado = pec.idperiodoescolar
             WHERE i.nombreInstitucion LIKE '%$request->busqueda%'
-            GROUP BY i.idInstitucion
             ORDER BY i.idInstitucion, i.fecha_registro DESC
             ");
         }
